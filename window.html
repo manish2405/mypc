@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MY PC</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+<body id="desktop">
+    <div class="mycomputer" id="mydcomp" >
+            <a ondblclick="document.location='newtb.html'" title="My Computer">
+            <img class="mycomp" src="img/mycompicon.png" alt="My Computer" ><p> My Computer</p>
+        </a>
+    </span>
+    </div>    
+
+    <div class="calculator" id="calc">
+        <img class="mycalc" src="img/Calculator.png" alt="calculator" title="Calculator"><p>Calculator</p>
+      
+    </div>
+
+    <div class="main-taskbar">
+        <div class="taskbar">
+            <div class="start">
+                <button onclick="startmenu()" title="Start"><img src="img/windowslogostart.png"> Start</button>
+                <ul class="start-menu startmenu" id="startmenu">
+                    <div class="administration">
+                        <p>Manish Verma</p>
+                        <img src="img/manishimg.jpg" alt="">
+                    </div>
+                    <div class="powerbtn">
+                    <a href="index.html"><li>Restart</li></a>
+                    <a href="adminlogon.html"><li>Logoff</li></a>
+                    <a href=""><li>Shut down</li></a>
+                    </div>
+                </ul>   
+            </div>
+            <div class="notify-time">
+                <p>10:45 AM</p>
+            </div>
+        </div>
+    </div>
+    
+<script>
+
+    var newwindow;
+    function openwin(){
+        newwindow = window.open("calc.html", "_black", "width=350, height=280");
+    }
+
+    function focuswin(){
+        newwindow.focus();
+    }
+    
+    document.getElementById("calc").addEventListener("dblclick", openwin);
+
+    // show and hide start menus using start button
+    function startmenu() {
+  var x = document.getElementById("startmenu");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+
+</script>
+</body>
+</html>

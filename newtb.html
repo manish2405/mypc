@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Computer</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+<body id="openmycomp">
+    <aside class="lftside">
+    
+    </aside>
+    <div class="container">
+            <div class="aside">
+            
+            </div>
+    <div class="mainlocal">            
+    <div class="localc" title="Local Disk">
+        <a href="localdisk.html" ondblclick="sound.play()">
+        <img src="img/localdisk.png"><p>Local Disk (C) </p>
+        </a>
+    </div><hr>
+    <div class="locald" title="Local Disk">
+            <a href="localdisk.html" ondblclick="sound.play()">
+            <img src="img/localdisk.png"><p>Local Disk (D)</p>
+            </a>
+        </div><hr>
+    <div class="floppy" title="Floppy Disk">
+            <a href="#" ondblclick="sound.play()">
+            <img src="img/floppyicon.png"><p>Floppy Disk (A)</p>
+            </a>
+        </div>
+    </div>
+    </div>
+
+    <div class="main-taskbar">
+            <div class="taskbar">
+                <div class="start">
+                    <button onclick="startmenu()" title="Start"><img src="img/windowslogostart.png"> Start</button>
+                    <ul class="start-menu startmenu" id="startmenu">
+                        <div class="administration">
+                            <p>Manish Verma</p>
+                            <img src="img/manishimg.jpg" alt="">
+                        </div>
+                        <div class="powerbtn">
+                        <a href="index.html"><li>Restart</li></a>
+                        <a href="adminlogon.html"><li>Logoff</li></a>
+                        <a href=""><li>Shut down</li></a>
+                        </div>
+                    </ul>   
+                </div>
+                <div class="notify-time">
+                    <p>10:45 AM</p>
+                </div>
+            </div>
+        </div>
+
+    <script>
+    var sound = new Audio();
+    sound.src = "audio/Click.mp3";
+
+    
+    function startmenu() {
+  var x = document.getElementById("startmenu");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+    </script>
+</body>
+</html>
